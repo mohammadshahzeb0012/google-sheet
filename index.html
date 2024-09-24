@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Options Sections  -->
+    <section class="options">
+        <form class="form-container" id="options-form">
+            <select name="fontFamily" id="">
+                <option value="default">Default</option>
+            </select>
+            <input type="number" name="fontSize" value="16">
+            <div>
+                <input type="checkbox" name="isBold" id="isBold">
+                <label for="isBold" class="material-icons">format_bold</label>
+            </div>
+            <div>
+                <input type="checkbox" name="isItalic" id="isItalic">
+                <label for="isItalic" class="material-icons">format_italic</label>
+            </div>
+            <div>
+                <input type="checkbox" name="isUnderlined" id="isUnderlined">
+                <label for="isUnderlined" class="material-icons">format_underlined</label>
+            </div>
+            <div class="align-container fr-aic">
+                <div>
+                    <input type="radio" name="align" checked value="left" id="left">
+                    <label for="left" class="material-icons">format_align_left</label>
+                </div>
+                <div>
+                    <input type="radio" name="align" value="center" id="center">
+                    <label for="center" class="material-icons">format_align_center</label>
+                </div>
+                <div>
+                    <input type="radio" name="align" value="right" id="right">
+                    <label for="right" class="material-icons">format_align_right</label>
+                </div>
+            </div>
+            <div>
+                <input type="color" name="textColor" id="textColor">
+                <label for="textColor" class="material-icons">format_color_text</label>
+            </div>
+            <div>
+                <input type="color" name="bgColor" id="bgColor" value="#ffffff">
+                <label for="bgColor" class="material-icons">format_color_fill</label>
+
+            </div>
+        </form>
+          <div class="fr-aic">
+            
+            <span type="button" id="download" class="material-icons">
+                cloud_download
+            </span>
+            <div>
+                <input type="file" name="upload" id="upload" style="display: none;">
+                <label for="upload" class="material-icons">cloud_upload</label>
+            </div>
+          </div>  
+
+        <!-- Evalution the Data  -->
+        <div class="box fr-aic">
+            <div class="selected-cell">NA</div>
+            <input type="text" id="expression" placeholder="Evalute Expression">
+        </div>
+    </section>
+
+    <!-- body Sections -->
+    <section class="conatiner">
+        <div class="plate"></div>
+        <div class="head-row" id="head-row"></div>
+        <div class="sno" id="sno"></div>
+        <div class="body" id="body"></div>
+    </section>
+
+
+
+    <button id="undoButton">Undo</button>
+    <button id="redoButton">Redo</button>
+
+    <script src="options.js"></script>
+    <script src="script.js"></script>
+    <script src="import-export.js"></script>
+    <script src="udnu redu.js"></script>
+</body>
+
+</html>

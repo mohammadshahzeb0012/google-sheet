@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+}
+/* ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0
+} */
+.conatiner {
+    height: 80vh;
+    width: 100vw;
+    border: 1px solid #cecece;
+    /* margin-top: 50px; */
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-template-rows: 30px auto;
+    border: 0.5px solid #C0C0C0;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+.plate {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #F8F9FA;
+    z-index: 100;
+    border: 1px solid #c0c0c0
+}
+.head-row {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+.head-row .col-head {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0.5px solid #c0c0c0
+}
+.body {
+    /* background-color: tomato; */
+}
+
+.sno {
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+}
+
+.sno .sno-cell {
+    height: 30px;
+    border: 0.5px solid #c0c0c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+.cell {
+    border:0.5px solid #c0c0c0;
+    width: 150px;
+    min-height: 20px;
+    height: 30px !important;
+    overflow: hidden;
+    font-size: 16px;
+    background-color: white;
+}
+.cell:focus {
+    border-color: blue;
+    outline-color: blue;
+}
+
+
+/* Options Section  */
+.options{
+    height: 20vh;
+    background-color: #f8f8fd;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.form-container{
+    padding: 10px;
+    background-color: #edf2fa;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50px;
+    align-items: center;
+}
+.fr-aic{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="checkbox"], input[type="radio"]{
+    display: none;
+}
+input[type="color"]{
+    width: 0;
+    height: 0;
+   visibility: hidden;
+}
+
+input[type="checkbox"]:checked + label, input[type="radio"]:checked+label{
+    background-color: #d3e2fd;
+    cursor: pointer;
+}
+label{
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.box{
+    width: 80vw;
+    margin: auto;
+}
+.box>.selected-cell{
+    background-color: #d3e2fd;
+    padding: 10px;
+    width: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+.box>input{
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 50px;
+    border-width: .1px;
+}
+.active-cell{
+    border-color: transparent;
+    outline: 2px solid #0957d0;
+   position: relative;
+   z-index: 15;
+}
